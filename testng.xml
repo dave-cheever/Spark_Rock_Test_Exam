@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+    <test name="Form Content Test">
+        <classes>
+            <class name="Formic.FormContentTest" />
+            <class name="Formic.LoginTest" />
+            <class name="Formic.RegistrationTest" />
+            <class name="Formic.DataDerivationTest" />
+            <class name="Formic.DataValidationTest" />
+
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+
+    <suite-files>
+        <!-- Other suite files if needed -->
+    </suite-files>
+    <parameter name="outputDirectory" value="src/test-output/surefire-reports/junitreports"/> <!-- Specify the output directory -->
+</suite>
+
